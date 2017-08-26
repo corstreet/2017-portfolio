@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>particles</title>
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="https://use.fontawesome.com/47f5ea798a.js"></script>
+</head>
+<body>
+
+<div id="particles-js">
+</div>
+
+<div id="nav-bar">
+  <a href="javascript:;" class="logo">
+    <i class="fa fa-terminal"></i>
+  </a>
+
+  <nav class="nav">
+    <a class="active" href="javascript:;"><i class="fa fa-home"></i></a>
+    <a href="javascript:;"><i class="fa fa-code"></i></a>
+    <a href="javascript:;"><i class="fa fa-folder"></i></a>
+  </nav>
+
+  <div class="nav-name vertical-text">corwin street</div>
+  <ul class="social">
+    <li>
+      <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;"><i class="fa fa-github"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;"><i class="fa fa-envelope"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;"><i class="fa fa-file"></i></a>
+    </li>
+  </ul>
+</div>
+
+<div class="home-content">
+  <h1 class="home-h1">Corwin Street<span class="name-period">.</span></h1>
+  <div class="home-subtext">Frontend Developer</div>
+</div>
+<!-- footer nav component -->
+<div class="home-nav-wrap">
+  <div class="nav-link onHover work">
+    <a href="work.html">Work<span class="right-bounce-arrow">&rarr;</span></a>
+  </div>
+  <div class="nav-link-border-bottom"></div>
+</div>
+
+<script src="./dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js',
+    'particles.json', function(){
+      console.log('particles.json loaded...');
+  });
+</script>
+</body>
+</html>

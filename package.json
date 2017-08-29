@@ -4,8 +4,8 @@
   "description": "Portfolio Site for Corwin Street - Senior FE Developer",
   "main": "index.html",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w"
+    "build": "webpack -p",
+    "watch": "webpack -d --watch"
   },
   "author": "Corwin Street",
   "license": "ISC",
@@ -13,8 +13,11 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }

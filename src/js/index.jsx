@@ -1,13 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Navbar from './components/Navbar';
 
-class App extends React.Component {
-  render () {
-    return (
-	    <Navbar />
-    )
-  }
-}
+import Home from './routes/Home';
 
-render(<App/>, document.getElementById('app'));
+const app = document.getElementById('app');
+
+render(<Home/>, app); 

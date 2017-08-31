@@ -48,6 +48,10 @@ img {
 	background: #6282c0;
 }
 
+.container {
+	margin-left: 60px;
+}
+
 /* HELPERS */
 .onHover:hover {
 	transform: scale(1.1);
@@ -57,6 +61,7 @@ img {
 #nav-bar {
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 60px;
 	height: 100%;
 	min-height: 580px;

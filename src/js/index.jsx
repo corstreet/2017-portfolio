@@ -1,8 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-import Home from './routes/Home';
+import App from './components/App';
 
 const app = document.getElementById('app');
 
-render(<Home/>, app); 
+render(<App />, app); 

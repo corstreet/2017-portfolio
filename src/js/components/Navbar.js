@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+
 
 class Navbar extends React.Component {
 
@@ -27,9 +29,9 @@ class Navbar extends React.Component {
 			  </a>
 
 			  <nav onClick={this.handleNavClick} className="nav">
-			    <Link to="/home"><i className="fa fa-home"></i></Link>
-			    <a href="javascript:;"><i className="fa fa-code"></i></a>
-			    <a href="javascript:;"><i className="fa fa-folder"></i></a>
+			    <NavLink activeClassName="active" exact to="/"><i className="fa fa-home"></i></NavLink>
+			    <NavLink activeClassName="active" to="about"><i className="fa fa-code"></i></NavLink>
+			    <NavLink activeClassName="active" to="work"><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 
 			  <div className="nav-name vertical-text">corwin street</div>

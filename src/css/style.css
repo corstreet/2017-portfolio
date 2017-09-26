@@ -44,12 +44,33 @@ img {
 
 #particles-js {
 	height: 100vh;
-	/*margin-left: 60px;*/
 	background: #6282c0;
+}
+
+#app {
+	color: #FFF;
 }
 
 .container {
 	margin-left: 60px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: black;
+}
+
+.row {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 250px;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
 }
 
 /* HELPERS */
@@ -87,7 +108,6 @@ img {
     width: 100%;
     font-size: 1.4rem;
     height: 140px;
-    /*margin-top: 120px;*/
 }
 
 .nav a {
@@ -249,10 +269,27 @@ nav.nav a:hover i {
     align-items: center;
 }
 
-.project-info {
-	padding: 4rem 6rem;
-	color: #000000;
-	background: rgba(255,255,255,.9);
+.project-image {
+    width: 50%;
+    margin: 0;
+}
+
+.project-image img::before {
+	content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c0a062;
+    position: absolute;
+}
+
+.project-image img {
+	max-height: 100%;
+}
+
+.project-details {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .work-blurb {

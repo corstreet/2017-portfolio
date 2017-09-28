@@ -20,7 +20,7 @@ class Work extends React.Component {
 							<li className="tech-item">Custom WP</li>
 							<li className="tech-item">Grunt</li>
 						</ul>
-						<div className="project-link">
+						<div className="view-project-link">
 							<a href="javascript:;">View Project</a>
 						</div>
 					</div>

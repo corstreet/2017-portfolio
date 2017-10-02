@@ -5,12 +5,12 @@ class Work extends React.Component {
 	render() {
 		return (
 			<div className="container work-container">
-				<div className="row">
-					<figure className="project-image">
-						<img src="./assets/images/ch-grab.jpg" alt=""/>
-					</figure>
+				<figure className="project-header">
+					<object id="ch-svg" type="image/svg+xml" data="./assets/images/ch-logo.svg"/>
+				</figure>
+				<section className="project-wrapper">
+					<h1 className="headline-company">Collective Health</h1>
 					<div className="project-details">
-						<h1 className="h1">Collective Health</h1>
 						<p>Collective Health gives companies a smarter way to provide healthcare coverage through technology. During my time there, I was able to contribute to many front end initiatives.</p>
 						<ul className="tech-list">
 							<li className="tech-item">Backbone.js</li>
@@ -24,7 +24,12 @@ class Work extends React.Component {
 							<a href="javascript:;">View Project</a>
 						</div>
 					</div>
-				</div>
+					<div className="project-screens">
+						<img className="screen desktop" src="./assets/images/ch-desktop.png" alt=""/>
+						<img className="screen tablet" src="./assets/images/ch-tablet.png" alt=""/>
+						<img className="screen mobile" src="./assets/images/ch-mobile.png" alt=""/>
+					</div>
+				</section>
 			</div>
 		)
 	}

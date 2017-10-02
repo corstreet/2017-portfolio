@@ -6,7 +6,7 @@ class Home extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div id="home">
 				<div id="particles-js"></div>
 				<div className="home-content">
 				  <h1 className="home-h1">Corwin Street<span className="name-period">.</span></h1>

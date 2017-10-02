@@ -22,7 +22,6 @@ html {
 
 body {
 	margin: 0;
-	overflow: hidden;
 	font-family: 'Cormorant Garamond', 'Montserrat', Garamond;
 }
 
@@ -39,7 +38,7 @@ a:hover {
 }
 
 img {
-	max-width: 100%;
+	/* max-width: 100%; */
 }
 
 #particles-js {
@@ -49,6 +48,10 @@ img {
 
 #app {
 	color: #FFF;
+}
+
+#home {
+	overflow: hidden;
 }
 
 .container {
@@ -61,14 +64,6 @@ img {
 	color:  #000000;
 }
 
-.row {
-	display: flex;
-	flex-direction: row-reverse;
-	max-height: 545px;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
 
 /* HELPERS */
 .onHover:hover {
@@ -178,6 +173,9 @@ nav.nav a:hover i {
 	padding: 7px 0;
 }
 /* HOME */
+#home {
+	overflow: auto;
+}
 .home-content {
 	color: #FFFFFF;
 	width: 100%;
@@ -252,18 +250,23 @@ nav.nav a:hover i {
 
 /* WORK */
 
-.project-image {
-    margin-top: 0;
-    margin-bottom: 0;
+.work-container {
+	overflow:  auto;
 }
 
-.project-image img {
-	max-height: 100%;
+.project-header {
+    margin: 0 0 100px;
+    height: 30rem;
+    background: #1d1d1d;
+    display: flex;
 }
-
+.project-wrapper {
+	padding:  0 60px;
+}
 .project-details {
-	padding: 0 50px;
-	min-width: 450px;	
+    width: 45%;
+    float: left;
+    margin-right: 5%;
 }
 
 .project-details .h1 {
@@ -295,7 +298,65 @@ nav.nav a:hover i {
 	background: #6282c0;
 	font-size: 20px;
 	color: #FFFFFF;
-	
+}
+.project-header-background {
+	width:  100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(4px);
+}
+#ch-svg {
+	width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.headline-company {
+	font-size: 48px;
+	color: #c0a062;
+}
+.row {
+	display: flex;
+	max-height: 545px;
+	position: relative;
+}
+.project-screens {
+    position: relative;
+    height: auto;
+    float: right;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 40%;
+    perspective: 2000px;
 }
 
+.project-screens .screen {
+	max-height: 100%;
+	position: absolute;
+	display: block;
+	transform-origin: left bottom;
+	display: block;
+	transform: rotateY(-30deg) rotateX(5deg);
+	box-shadow: 1px 0px 0 #fff,
+				0 0 30px rgba(0,95,99,0.2);
+}
+.screen.desktop {
+	top: 0;
+    left: 50%;
+    width: 95%;
+    transform: rotateY(-30deg) rotateX(5deg) translateX(-50%);
+}
+.screen.tablet {
+	z-index: 1;
+    width: 45%;
+    top: 15%;
+}
+.screen.mobile {
+	top: 50%;
+    width: 20%;
+    z-index: 2;
+    right: 50%;
+}
 

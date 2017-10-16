@@ -326,6 +326,7 @@ nav.nav a:hover i {
     height: auto;
     float: right;
     width: 50%;
+    max-width: 550px;
     text-align: center;
     margin: 0;
     padding-bottom: 40%;
@@ -358,5 +359,25 @@ nav.nav a:hover i {
     width: 20%;
     z-index: 2;
     right: 50%;
+}
+.screenshots {
+	clear: both;
+	padding-top: 10%;
+}
+.screenshots img {
+	float: left;
+	display: inline-block;
+	margin-bottom:  5%;
+	box-shadow: -1px 0px 0 #fff, -1px 1px 30px rgba(0,95,99,0.2);
+}
+.screenshots--desktop {
+	max-width: 100%;
+}
+.screenshots--tablet {
+	max-width: 60%;
+}
+.screenshots--mobile {
+	max-width: 35%;
+	margin-left: 5%;
 }
 

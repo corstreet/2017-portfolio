@@ -29,6 +29,11 @@ class Work extends React.Component {
 						<img className="screen tablet" src="./assets/images/ch-tablet.png" alt=""/>
 						<img className="screen mobile" src="./assets/images/ch-mobile.png" alt=""/>
 					</div>
+					<div className="screenshots">
+						<img className="screenshots--desktop" src="./assets/images/ch-desktop.png" alt=""/>
+						<img className="screenshots--tablet" src="./assets/images/ch-tablet.png" alt=""/>
+						<img className="screenshots--mobile" src="./assets/images/ch-mobile.png" alt=""/>
+					</div>
 				</section>
 			</div>
 		)

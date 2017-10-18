@@ -30,7 +30,7 @@ class Navbar extends React.Component {
 
 			  <nav onClick={this.handleNavClick} className="nav">
 			    <NavLink activeClassName="active" exact to="/"><i className="fa fa-home"></i></NavLink>
-			    <NavLink activeClassName="active" to="about"><i className="fa fa-code"></i></NavLink>
+			    <NavLink activeClassName="active" to="about"><i className="fa fa-id-card"></i></NavLink>
 			    <NavLink activeClassName="active" to="work"><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 

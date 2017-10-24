@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import ProjectSlideNav from './ProjectSlideNav';
 
 
 class Navbar extends React.Component {
@@ -22,9 +23,9 @@ class Navbar extends React.Component {
 
 	render () {
 		return (
-
+			<section>
 			<div id="nav-bar">
-			  <a href="javascript:;" className="logo">
+			  <a onClick={this.toggleSideNav} className="logo">
 			    <i className="fa fa-terminal"></i>
 			  </a>
 
@@ -50,6 +51,8 @@ class Navbar extends React.Component {
 			    </li>
 			  </ul>
 			</div>
+			<ProjectSlideNav className="hello"/>
+			</section>
 
 		)
 	}

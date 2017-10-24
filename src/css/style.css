@@ -85,7 +85,7 @@ img {
 	justify-content: space-between;
 	background: #181818;
 	text-align: center;
-	z-index: 1;
+	z-index: 10;
 }
 
 .logo {
@@ -155,7 +155,7 @@ nav.nav a:hover i {
 
 .nav-name {
 	color: #FFFFFF;
-	font-family: 'Source Sans Pro', courier;
+	font-family: 'Source Sans Pro', 'Open Sans';
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transform: rotate(-90deg);
@@ -252,12 +252,16 @@ nav.nav a:hover i {
 
 .work-container {
 	overflow:  auto;
+	filter: blur(8px);
 }
 
 .project-header {
     margin: 0 0 100px;
     height: 30rem;
-    background: #1d1d1d;
+    background-color: #1d1d1d;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
     display: flex;
 }
 .project-wrapper {
@@ -382,4 +386,47 @@ nav.nav a:hover i {
     font-size: 24px;
     color: #c0a062;
 }
+
+/*SLIDE NAV*/
+#project-nav-view {
+	position: absolute;
+    top: 0;
+    left: 60px;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    opacity: 0.9;
+    z-index: 1;
+}
+.slide-nav-wrapper {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 350px;
+	color: #c0a062;
+	background: #181818;
+    border: 1px solid #c0a062;
+    border-left: none;
+}
+.project-nav-item {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Source Sans Pro', 'Open sans';
+    font-weight: 600;
+    padding: 20px;
+    border-bottom: 1px solid #c0a062;
+    transition: background .4s ease-in-out;
+}
+.project-nav-item:hover {
+	background: #FFFFFF;
+	transition: background .3s ease-in-out;
+}
+
+
+
+
+
+
+
 

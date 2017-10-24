@@ -33,7 +33,7 @@
 				"rotateX":3000,
 				"rotateY": 1200
 			}
-		}	
+		}
 	},
 	"interactivity":{
 		"detect_on":"window",

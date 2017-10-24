@@ -25,7 +25,7 @@ class Navbar extends React.Component {
 		return (
 			<section>
 			<div id="nav-bar">
-			  <a onClick={this.toggleSideNav} className="logo">
+			  <a onClick={this.props.toggleSideNav} className="logo">
 			    <i className="fa fa-terminal"></i>
 			  </a>
 
@@ -51,7 +51,6 @@ class Navbar extends React.Component {
 			    </li>
 			  </ul>
 			</div>
-			<ProjectSlideNav className="hello"/>
 			</section>
 
 		)

@@ -16,7 +16,7 @@ class App extends React.Component {
 		this.state = {
 			company: {
 				logo: './assets/images/ch-logo.svg',
-				headerBG: "url('../../assets/images/ch-header-bg.png')",
+				headerBG: "url('./assets/images/ch-header-bg.png')",
 				name: 'Collective Health'
 			},
 			project: {
@@ -36,7 +36,7 @@ class App extends React.Component {
 					mobile: './assets/images/ch-mobile-2.png'
 				}
 			},
-			slideNavIsOpen: false
+			slideNavIsOpen: true
 		}
 
 		this.changePage = this.changePage.bind(this);
@@ -47,7 +47,7 @@ class App extends React.Component {
 		this.setState({
 			company: {
 				logo: './assets/images/nutanix-logo.svg',
-				headerBG: "url('../../assets/images/nutanix-header-bg.jpg')",
+				headerBG: "url('./assets/images/nutanix-header-bg.jpg')",
 				name: 'Nutanix'
 			},
 			project: {

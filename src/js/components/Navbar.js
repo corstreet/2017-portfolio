@@ -9,17 +9,17 @@ class Navbar extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.handleNavClick = this.handleNavClick.bind(this);
+		// this.handleNavClick = this.handleNavClick.bind(this);
 	}
 
-	handleNavClick (e) {
-		console.log(e.target);
-		const activeNavItem = document.querySelector('.nav a.active');
-		if (activeNavItem) {
-			activeNavItem.classList.remove('active');
-		}
-		e.target.classList.add('active');
-	}
+	// handleNavClick (e) {
+	// 	console.log(e.target);
+	// 	const activeNavItem = document.querySelector('.nav a.active');
+	// 	if (activeNavItem) {
+	// 		activeNavItem.classList.remove('active');
+	// 	}
+	// 	e.target.classList.add('active');
+	// }
 
 	render () {
 		return (
@@ -29,10 +29,10 @@ class Navbar extends React.Component {
 			    <i className="fa fa-terminal"></i>
 			  </a>
 
-			  <nav onClick={this.handleNavClick} className="nav">
+			  <nav className="nav">
 			    <NavLink activeClassName="active" exact to="/"><i className="fa fa-home"></i></NavLink>
-			    <NavLink activeClassName="active" to="about"><i className="fa fa-id-card"></i></NavLink>
-			    <NavLink activeClassName="active" to="work"><i className="fa fa-folder"></i></NavLink>
+			    <NavLink activeClassName="active" to="/about"><i className="fa fa-id-card"></i></NavLink>
+			    <NavLink activeClassName="active" to="/work"><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 
 			  <div className="nav-name vertical-text">corwin street</div>

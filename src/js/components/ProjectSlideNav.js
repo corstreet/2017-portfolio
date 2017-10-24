@@ -7,6 +7,7 @@ class ProjectSlideNav extends React.Component {
 
 	render() {
 		return (
+			<TransitionGroup>
 			<div id="project-nav-view">
 				<div className="slide-nav-wrapper">
 					<ul>
@@ -19,6 +20,7 @@ class ProjectSlideNav extends React.Component {
 					</ul>
 				</div>
 			</div>
+			</TransitionGroup>
 		)
 	}
 }

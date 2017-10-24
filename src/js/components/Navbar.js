@@ -8,18 +8,7 @@ class Navbar extends React.Component {
 
 	constructor(props) {
 		super(props);
-
-		// this.handleNavClick = this.handleNavClick.bind(this);
 	}
-
-	// handleNavClick (e) {
-	// 	console.log(e.target);
-	// 	const activeNavItem = document.querySelector('.nav a.active');
-	// 	if (activeNavItem) {
-	// 		activeNavItem.classList.remove('active');
-	// 	}
-	// 	e.target.classList.add('active');
-	// }
 
 	render () {
 		return (

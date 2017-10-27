@@ -1,17 +1,15 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 class ProjectSlideNav extends React.Component {
-	constructor() {
-		super();
-	}
 
 	render() {
 		return (
-			<TransitionGroup>
 			<div id="project-nav-view">
 				<div className="slide-nav-wrapper">
 					<ul>
-						<li className="project-nav-item">Collective Health</li>
+						<li className="project-nav-item" onClick={this.props.toggleSideNav}><NavLink to="/work">Collective Health</NavLink></li>
 						<li className="project-nav-item">Esurance</li>
 						<li className="project-nav-item">Totango</li>
 						<li className="project-nav-item">Nutanix</li>
@@ -20,7 +18,6 @@ class ProjectSlideNav extends React.Component {
 					</ul>
 				</div>
 			</div>
-			</TransitionGroup>
 		)
 	}
 }

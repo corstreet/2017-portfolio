@@ -21,7 +21,7 @@ class Navbar extends React.Component {
 			  <nav className="nav">
 			    <NavLink activeClassName="active" exact to="/"><i className="fa fa-home"></i></NavLink>
 			    <NavLink activeClassName="active" to="/about"><i className="fa fa-id-card"></i></NavLink>
-			    <NavLink activeClassName="active" to="/work"><i className="fa fa-folder"></i></NavLink>
+			    <NavLink activeClassName="active" to="/work" onClick={this.props.toggleSideNav}><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 
 			  <div className="nav-name vertical-text">corwin street</div>
@@ -30,13 +30,13 @@ class Navbar extends React.Component {
 			      <a href="javascript:;"><i className="fa fa-linkedin"></i></a>
 			    </li>
 			    <li>
-			      <a href="javascript:;"><i className="fa fa-github"></i></a>
+			      <a href="https://github.com/corstreet/Portfolio-2017-REACTjs-" target="blank"><i className="fa fa-github"></i></a>
 			    </li>
 			    <li>
 			      <a href="javascript:;"><i className="fa fa-envelope"></i></a>
 			    </li>
 			    <li>
-			      <a href="javascript:;"><i className="fa fa-file"></i></a>
+			      <a href="javascript:;"><i className="fa fa-file-pdf-o"></i></a>
 			    </li>
 			  </ul>
 			</div>

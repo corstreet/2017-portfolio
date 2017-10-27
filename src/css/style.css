@@ -252,7 +252,7 @@ nav.nav a:hover i {
 
 .work-container {
 	overflow:  auto;
-	filter: blur(8px);
+	/*filter: blur(8px);*/
 }
 
 .project-header {
@@ -421,6 +421,7 @@ nav.nav a:hover i {
 .project-nav-item:hover {
 	background: #FFFFFF;
 	transition: background .3s ease-in-out;
+	cursor: pointer;
 }
 
 

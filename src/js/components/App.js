@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Navbar from './Navbar';
 import ProjectSlideNav from './ProjectSlideNav';
@@ -21,7 +21,7 @@ class App extends React.Component {
 			},
 			project: {
 				description: 'Collective Health gives companies a smarter way to provide healthcare coverage through technology. Powered by a platform that connects and administers the entire benefits ecosystem — health plan, benefits programs, spending accounts, employee support — their solution delivers an effortless experience for everyone.',
-				tech: ['Backbone.js', 'PHP/ACF', 'jQuery', 'Sass/SCSS', 'Wordpress API', 'Grunt'],
+				tech: ['Backbone.js', 'GSAP', 'PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt'],
 				url: 'http://www.collectivehealth.com'
 			},
 			screenshots: {
@@ -36,7 +36,7 @@ class App extends React.Component {
 					mobile: './assets/images/ch-mobile-2.png'
 				}
 			},
-			slideNavIsOpen: true
+			slideNavIsOpen: false
 		}
 
 		this.changePage = this.changePage.bind(this);
@@ -71,25 +71,23 @@ class App extends React.Component {
 	}
 
 	toggleSideNav(e) {
-		e.preventDefault();
+		// e.preventDefault();
 		this.setState({
 			slideNavIsOpen: !this.state.slideNavIsOpen
-		})
+		});
 	}
 
 	render() {
 		return (
-			<HashRouter hashType="noslash">
+			<BrowserRouter>
 				<div>
 				  <Navbar toggleSideNav={this.toggleSideNav} />
-				  { /*STOP FORGETTING CONDITIONAL RENDERING!!*/ }
-				  { this.state.slideNavIsOpen && <ProjectSlideNav /> }
+				  { this.state.slideNavIsOpen && <ProjectSlideNav toggleSideNav={this.toggleSideNav} /> }
 			      <Route exact path="/" component={Home}/>
 			      <Route path="/about" component={About}/>
-			      <Route path="/work" render={() => <Work state={this.state}
-			      										  changePage={this.changePage}/>}/>
+			      <Route path="/work" render={() => <Work state={this.state} changePage={this.changePage}/>}/>
 			    </div>
-			</HashRouter>
+			</BrowserRouter>
 		)
 	}
 

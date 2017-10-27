@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 			  </a>
 
 			  <nav className="nav">
-			    <NavLink activeClassName="active" exact to="/"><i className="fa fa-home"></i></NavLink>
+			    <NavLink activeClassName="active" exact to="/" onClick={()=>window.location.reload()}><i className="fa fa-home"></i></NavLink>
 			    <NavLink activeClassName="active" to="/about"><i className="fa fa-id-card"></i></NavLink>
 			    <NavLink activeClassName="active" to="/work" onClick={this.props.toggleSideNav}><i className="fa fa-folder"></i></NavLink>
 			  </nav>

@@ -430,7 +430,7 @@ nav.nav a:hover i {
 
 
 	
-
+/* Sample Transition */
 .example-enter {
     opacity: .01;
     transform:   translate(-100%,0);

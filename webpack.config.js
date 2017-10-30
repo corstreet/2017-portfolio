@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const APP_DIR = path.resolve(__dirname, 'src/js');
 const BUILD_DIR = path.resolve(__dirname, './dist');
@@ -14,6 +15,9 @@ const config = {
   devServer: {
     historyApiFallback: true
   },
+  plugins: [
+    new DashboardPlugin()
+  ],
   module: {
     loaders: [
       {

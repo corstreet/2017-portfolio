@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack -d --watch",
-    "start": "webpack-dev-server --inline --content-base . --history-api-fallback"
+    "start": "webpack-dashboard -- webpack-dev-server -d --inline --content-base . --watch --history-api-fallback"
   },
   "author": "Corwin Street",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2",
-    "react-transition-group": "^2.2.1"
+    "react-transition-group": "^2.2.1",
+    "webpack-dashboard": "^1.0.0"
   }
 }

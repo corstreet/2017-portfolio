@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Navbar from './Navbar';
@@ -92,9 +92,23 @@ class App extends React.Component {
 				  	>
 				  { this.state.slideNavIsOpen && <ProjectSlideNav toggleSideNav={this.toggleSideNav} /> }
 				  </CSSTransitionGroup>
-			      <Route exact path="/" component={Home}/>
-			      <Route path="/about" component={About}/>
-			      <Route path="/work" render={() => <Work state={this.state} changePage={this.changePage}/>}/>
+				    <Route render={({ location }) => (
+					    <CSSTransitionGroup
+						transitionName='pagefade'
+						transitionEnterTimeout={1500}
+						transitionLeaveTimeout={1900}
+					    >
+					      <Switch location={location} key={location.key} >
+						    <Route exact path="/" component={Home}/>
+						    <Route path="/about" component={About}/><Route path="/work" render={() => <Work state={this.state} changePage={this.changePage}/>}/>
+						    <Route path="/work" render={() => <Work state={this.state} changePage={this.changePage}/>}/>
+					      </Switch>
+					    </CSSTransitionGroup>
+					)}
+				  />
+
+			      
+			      
 			    </div>
 			</BrowserRouter>
 		)

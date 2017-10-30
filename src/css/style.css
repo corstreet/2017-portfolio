@@ -459,4 +459,35 @@ nav.nav a:hover i {
 	transform: translate3d(100%,0,0);
 }
 
+.pagefade-enter {
+	opacity:.01;
+	
+}
+
+.pagefade-enter.pagefade-enter-active {
+	opacity:1;
+	
+	transition: all 500ms ease-in-out;
+}
+
+.pagefade-leave {
+	opacity:1;
+	
+	transition: all 500ms ease-in-out;
+}
+
+.pagefade-leave.pagefade-leave-active {
+	opacity: 0;
+	
+
+}
+
+
+
+
+
+
+
+
+
 

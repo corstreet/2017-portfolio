@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Work extends React.Component {
+
 	render() {
 
 		const { screenshots, project, company } = this.props.state

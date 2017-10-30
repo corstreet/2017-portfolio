@@ -1,8 +1,17 @@
 import React from 'react';
-
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import Particles from 'particles.js';
 
 class Home extends React.Component {
+	constructor(props){
+		super(props);
+		
+		particlesJS.load('particles-js',
+		'particles.json', function(){
+		  console.log('particles.json loaded...');
+		});
+	}
+
 	render() {
 		return (
 			<div id="home">

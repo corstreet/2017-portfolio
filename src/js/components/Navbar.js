@@ -19,9 +19,10 @@ class Navbar extends React.Component {
 			  </a>
 
 			  <nav className="nav">
+			  	{ /* TO DO:: REMOVE RELOAD ON 'HOME' NAV CLICK */ }
 			    <NavLink activeClassName="active" exact to="/" onClick={()=>window.location.reload()}><i className="fa fa-home"></i></NavLink>
 			    <NavLink activeClassName="active" to="/about"><i className="fa fa-id-card"></i></NavLink>
-			    <NavLink activeClassName="active" to="/work" onClick={this.props.toggleSideNav}><i className="fa fa-folder"></i></NavLink>
+			    <NavLink activeClassName="active" to="/work"><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 
 			  <div className="nav-name vertical-text">corwin street</div>

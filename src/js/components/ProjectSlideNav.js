@@ -9,10 +9,12 @@ class ProjectSlideNav extends React.Component {
 			<div id="project-nav-view">
 				<div className="slide-nav-wrapper">
 					<ul>
-						<NavLink to="/work">
+						<NavLink to="/work/collective-health">
 							<li className="project-nav-item" onClick={this.props.toggleSideNav}>Collective Health</li>
 						</NavLink>
-						<li className="project-nav-item">Esurance</li>
+						<NavLink to="/work/nutanix">
+							<li className="project-nav-item" onClick={this.props.toggleSideNav}>Esurance</li>
+						</NavLink>
 						<li className="project-nav-item">Totango</li>
 						<li className="project-nav-item">Nutanix</li>
 						<li className="project-nav-item">Big Dog HQ</li>

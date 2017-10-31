@@ -1,14 +1,17 @@
 import React from 'react';
+import projects from '../projects';
 
 class Work extends React.Component {
 
 	render() {
 
-		const { screenshots, project, company } = this.props.state
+		const { screenshots, project, company } = this.props.projectFound
 
 		const headerStyle = {
 			backgroundImage: company.headerBG
 		}
+
+		console.log(this.props);
 
 		return (
 			<div className="container work-container">
@@ -25,7 +28,7 @@ class Work extends React.Component {
 							})}
 						</ul>
 						<div className="view-project-link">
-							<a href="javascript:;" onClick={this.props.changePage}>See It Live</a>
+							<a href="javascript:;">See It Live</a>
 						</div>
 					</div>
 					<div className="project-screens">

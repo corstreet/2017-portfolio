@@ -5,11 +5,6 @@ import ProjectSlideNav from './ProjectSlideNav';
 
 
 class Navbar extends React.Component {
-
-	constructor(props) {
-		super(props);
-	}
-
 	render () {
 		return (
 			<section>
@@ -27,10 +22,10 @@ class Navbar extends React.Component {
 			  <div className="nav-name vertical-text">corwin street</div>
 			  <ul className="social">
 			    <li>
-			      <a href="javascript:;"><i className="fa fa-linkedin"></i></a>
+			      <a href="https://github.com/corstreet/Portfolio-2017-REACTjs-" target="blank"><i className="fa fa-github"></i></a>
 			    </li>
 			    <li>
-			      <a href="https://github.com/corstreet/Portfolio-2017-REACTjs-" target="blank"><i className="fa fa-github"></i></a>
+			      <a href="javascript:;"><i className="fa fa-linkedin"></i></a>
 			    </li>
 			    <li>
 			      <a href="javascript:;"><i className="fa fa-envelope"></i></a>

@@ -5,6 +5,7 @@ import ProjectSlideNav from './ProjectSlideNav';
 
 
 class Navbar extends React.Component {
+
 	render () {
 		return (
 			<section>

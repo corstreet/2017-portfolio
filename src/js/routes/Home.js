@@ -24,15 +24,15 @@ class Home extends React.Component {
 			<div id="home">
 				<div id="particles-js"></div>
 				<CSSTransitionGroup
-					transitionName='example'
+					transitionName='homeTitle'
 					transitionAppear={true}
-					transitionAppearTimeout={300}
+					transitionAppearTimeout={2300}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 					>
 				<div className="home-content">
-				  <h1 className="home-h1">Corwin Street<span className="name-period">.</span></h1>
-				  <div className="home-subtext">Frontend Developer</div>
+				  <h1 className="home-h1">Lorem Ipsum<span className="name-period">.</span></h1>
+				  <div className="home-subtext">Other things here</div>
 				</div>
 				</CSSTransitionGroup>
 				<div className="home-nav-wrap">

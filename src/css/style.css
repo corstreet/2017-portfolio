@@ -429,23 +429,20 @@ nav.nav a:hover i {
 
 
 
-	
 /* Sample Transition */
-.example-enter {
+.slideNav-enter {
     opacity: .01;
-    transform:   translate(-100%,0);
-    transform: translate3d(-100%,0,0);
+    transform:   translateX(-100%);
 }
-.example-enter.example-enter-active {
+.slideNav-enter.slideNav-enter-active {
 	opacity: 1;
 	/*transition: opacity 1s ease;*/
-	transform:   translate(0,0);
-	transform: translate3d(0,0,0);
+	transform:   translateX(0);
 	transition-property: transform, opacity;
 	transition-duration: 1300ms;
 	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
-.example-leave {
+.slideNav-leave {
 	opacity: 1;
 	transform:   translate(0,0,0);
 	transform: translate3d(0,0,0);
@@ -453,33 +450,61 @@ nav.nav a:hover i {
 	transition-duration: 1300ms;
 	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
-.example-leave.example-leave-active {
+.slideNav-leave.slideNav-leave-active {
 	opacity: 0;
 	transform:   translate(100%,0);
 	transform: translate3d(100%,0,0);
 }
 
+
+.homeTitle-appear {
+	opacity:.01;
+	transform: translate3d(-40%, -50%, 0);
+}
+
+.homeTitle-appear.homeTitle-appear-active {
+	opacity:1;
+	transform: translate3d(0, -50%, 0);
+	transition: transform 1000ms ease-in-out,
+				opacity 2000ms ease-in;
+}
+
+.homeTitle-enter {
+	opacity:.01;
+}
+
+.homeTitle-enter.homeTitle-enter-active {
+	opacity:1;
+	transition: all 500ms ease-in-out;
+}
+
+.homeTitle-leave {
+	opacity:1;
+	transition: all 500ms ease-in-out;
+}
+
+.homeTitle-leave.homeTitle-leave-active {
+	opacity: 0;
+}
+
+
+
 .pagefade-enter {
 	opacity:.01;
-	
 }
 
 .pagefade-enter.pagefade-enter-active {
 	opacity:1;
-	
 	transition: all 500ms ease-in-out;
 }
 
 .pagefade-leave {
 	opacity:1;
-	
 	transition: all 500ms ease-in-out;
 }
 
 .pagefade-leave.pagefade-leave-active {
 	opacity: 0;
-	
-
 }
 
 

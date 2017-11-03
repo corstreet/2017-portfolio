@@ -37,32 +37,28 @@ class App extends React.Component {
 				<div>
 				  <Navbar toggleSideNav={this.toggleSideNav} />
 				  <CSSTransitionGroup
-					transitionName="example"
+					transitionName="slideNav"
 		            transitionEnterTimeout={1300}
 		            transitionLeaveTimeout={1300}
 				  	>
 				  { this.state.slideNavIsOpen && <ProjectSlideNav toggleSideNav={this.toggleSideNav} /> }
 				  </CSSTransitionGroup>
-				    <Route render={({ location }) => (
-					    <CSSTransitionGroup
-						transitionName='pagefade'
-						transitionEnterTimeout={1500}
-						transitionLeaveTimeout={1900}
-					    >
-					      <Switch location={location} key={location.key} >
+			    <Route render={({ location }) => (
+				    <CSSTransitionGroup
+							transitionName='pagefade'
+							transitionEnterTimeout={1500}
+							transitionLeaveTimeout={1900}
+				    >
+				      <Switch location={location} key={location.key} >
 						    <Route exact path="/" component={Home}/>
 						    <Route path="/about" component={About}/>
 						    <Route path="/work/:projectID" render={({match}) => (
-						    	<Work projectFound={projects.find( project => project.id === match.params.projectID )} />
+						    	<Work toggleSideNav={this.toggleSideNav} projectFound={projects.find( project => project.id === match.params.projectID )} />
 						    )} />
-					      </Switch>
-					    </CSSTransitionGroup>
-					)}
-				  />
-
-			      
-			      
-			    </div>
+				      </Switch>
+				    </CSSTransitionGroup>
+					)}/>
+			   </div>
 			</BrowserRouter>
 		)
 	}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import projects from '../projects';
 
 class Work extends React.Component {
@@ -42,7 +43,7 @@ class Work extends React.Component {
 						<img className="screenshots--mobile" src={screenshots.large.mobile} alt=""/>
 					</div>
 					<div className="more-projects-link">
-						<a href="javascript:;">More Projects</a>
+						<Link to="/work" onClick={this.props.toggleSideNav}>More Projects</Link>
 					</div>
 				</section>
 			</div>

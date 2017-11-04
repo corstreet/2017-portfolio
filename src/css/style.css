@@ -459,7 +459,7 @@ nav.nav a:hover i {
 
 .homeTitle-appear {
 	opacity:.01;
-	transform: translate3d(-40%, -50%, 0);
+	transform: translate3d(40%, -50%, 0);
 }
 
 .homeTitle-appear.homeTitle-appear-active {
@@ -509,7 +509,10 @@ nav.nav a:hover i {
 
 
 
-
+.sampleDroneVid {
+	max-width: 100%;
+	padding-left: 60px;
+}
 
 
 

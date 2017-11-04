@@ -35,7 +35,7 @@ class App extends React.Component {
 		return (
 			<BrowserRouter>
 				<div>
-				  <Navbar toggleSideNav={this.toggleSideNav} />
+				  <Navbar state={this.state} toggleSideNav={this.toggleSideNav} />
 				  <CSSTransitionGroup
 					transitionName="slideNav"
 		            transitionEnterTimeout={1300}

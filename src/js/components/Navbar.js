@@ -6,6 +6,12 @@ import ProjectSlideNav from './ProjectSlideNav';
 
 class Navbar extends React.Component {
 
+	closeSlideNav() {
+		if (this.props.state.slideNavIsOpen){
+			this.props.toggleSideNav();
+		}
+	}
+
 	render () {
 		return (
 			<section>
@@ -15,8 +21,8 @@ class Navbar extends React.Component {
 			  </NavLink>
 
 			  <nav className="nav">
-			    <NavLink activeClassName="active" exact to="/"><i className="fa fa-home"></i></NavLink>
-			    <NavLink activeClassName="active" to="/about"><i className="fa fa-id-card"></i></NavLink>
+			    <NavLink activeClassName="active" exact to="/" onClick={this.closeSlideNav.bind(this)}><i className="fa fa-home"></i></NavLink>
+			    <NavLink activeClassName="active" to="/about" onClick={this.closeSlideNav.bind(this)}><i className="fa fa-id-card"></i></NavLink>
 			    <NavLink activeClassName="active" to="/work" onClick={this.props.toggleSideNav} ><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 

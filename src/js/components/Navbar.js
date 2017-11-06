@@ -6,7 +6,7 @@ import ProjectSlideNav from './ProjectSlideNav';
 
 class Navbar extends React.Component {
 
-	closeSlideNav() {
+	closeSlideNav(e) {
 		if (this.props.state.slideNavIsOpen){
 			this.props.toggleSideNav();
 		}
@@ -43,7 +43,6 @@ class Navbar extends React.Component {
 			  </ul>
 			</div>
 			</section>
-
 		)
 	}
 }

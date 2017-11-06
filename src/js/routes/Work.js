@@ -11,9 +11,7 @@ class Work extends React.Component {
 		const headerStyle = {
 			backgroundImage: company.headerBG
 		}
-
-		console.log(this.props);
-
+		
 		return (
 			<div className="container work-container">
 				<figure style={headerStyle} className="project-header">

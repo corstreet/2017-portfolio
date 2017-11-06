@@ -14,10 +14,10 @@ class ProjectSlideNav extends React.Component {
 							<li className="project-nav-item" onClick={toggleSideNav}>Collective Health</li>
 						</NavLink>
 						<NavLink to="/work/nutanix">
-							<li className="project-nav-item" onClick={toggleSideNav}>Esurance</li>
+							<li className="project-nav-item" onClick={toggleSideNav}>Nutanix</li>
 						</NavLink>
 						<li className="project-nav-item">Totango</li>
-						<li className="project-nav-item">Nutanix</li>
+						<li className="project-nav-item">Esurance</li>
 						<li className="project-nav-item">Big Dog HQ</li>
 						<li className="project-nav-item">Nuvasive</li>
 					</ul>

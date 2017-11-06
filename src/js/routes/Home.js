@@ -15,7 +15,7 @@ class Home extends React.Component {
 
 	particlesInit(){
 		particlesJS.load('particles-js', 'particles.json', function(){
-		  console.log('particles.json loaded...');
+		  console.log('Have fun with the Particles!');
 		});
 	}
 
@@ -37,7 +37,7 @@ class Home extends React.Component {
 				</CSSTransitionGroup>
 				<div className="home-nav-wrap">
 				  <div className="nav-link onHover work">
-				    <a href="work.html">Work<span className="right-bounce-arrow">&rarr;</span></a>
+				    <a href="work.html">Contact<span className="right-bounce-arrow">&rarr;</span></a>
 				  </div>
 				  <div className="nav-link-border-bottom"></div>
 				</div>

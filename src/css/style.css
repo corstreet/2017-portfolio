@@ -44,7 +44,6 @@ img {
 #particles-js {
 	height: 100vh;
 	background: #6282c0;
-	padding-left: 60px;
 }
 
 #app {
@@ -510,7 +509,9 @@ nav.nav a:hover i {
 
 
 .sampleDroneVid {
-	max-width: 100%;
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
 	padding-left: 60px;
 }
 

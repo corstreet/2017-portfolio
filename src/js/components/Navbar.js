@@ -13,6 +13,7 @@ class Navbar extends React.Component {
 	}
 
 	render () {
+
 		return (
 			<section>
 			<div id="nav-bar">
@@ -23,7 +24,7 @@ class Navbar extends React.Component {
 			  <nav className="nav">
 			    <NavLink activeClassName="active" exact to="/" onClick={this.closeSlideNav.bind(this)}><i className="fa fa-home"></i></NavLink>
 			    <NavLink activeClassName="active" to="/about" onClick={this.closeSlideNav.bind(this)}><i className="fa fa-id-card"></i></NavLink>
-			    <NavLink activeClassName="active" to="/work" onClick={this.props.toggleSideNav} ><i className="fa fa-folder"></i></NavLink>
+			    <NavLink activeClassName="active noDisable" to="/work" onClick={this.props.toggleSideNav} ><i className="fa fa-folder"></i></NavLink>
 			  </nav>
 
 			  <div className="nav-name vertical-text">corwin street</div>

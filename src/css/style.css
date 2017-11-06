@@ -151,6 +151,10 @@ nav.nav a:hover i {
 }
 .nav a.active {
 	color: #c0a062;
+	pointer-events: none;
+}
+.nav a.active.noDisable {
+	pointer-events: all;
 }
 
 .nav-name {

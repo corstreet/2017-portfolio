@@ -399,7 +399,7 @@ nav.nav a:hover i {
     bottom: 0;
     right: 0;
     background: #fff;
-    opacity: 0.9;
+    opacity: 0;
     z-index: 1;
 }
 .slide-nav-wrapper {
@@ -420,11 +420,11 @@ nav.nav a:hover i {
     font-weight: 600;
     padding: 20px;
     border-bottom: 1px solid #c0a062;
-    transition: background .4s ease-in-out;
+    transition: background .08s ease-in;
 }
 .project-nav-item:hover {
 	background: #FFFFFF;
-	transition: background .3s ease-in-out;
+	transition: background .17s ease-out;
 	cursor: pointer;
 }
 
@@ -433,30 +433,31 @@ nav.nav a:hover i {
 
 
 /* Sample Transition */
-.slideNav-enter {
-    opacity: .01;
-    transform:   translateX(-100%);
+
+.slideNav-appear {
+	opacity: 0;
 }
+
+.slideNav-appear.slideNav-appear-active {
+	opacity: 1;
+	transition: opacity 6500ms ease-in-out;
+}
+.slideNav-enter {
+	opacity: 0;
+}
+
 .slideNav-enter.slideNav-enter-active {
 	opacity: 1;
-	/*transition: opacity 1s ease;*/
-	transform:   translateX(0);
-	transition-property: transform, opacity;
-	transition-duration: 1300ms;
-	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+	transition: opacity 400ms ease-in-out;
 }
+
 .slideNav-leave {
-	opacity: 1;
-	transform:   translate(0,0,0);
-	transform: translate3d(0,0,0);
-  transition-property: transform, opacity;
-	transition-duration: 1300ms;
-	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+	opacity:1;
+	transition: opacity 400ms ease-in-out;
 }
+
 .slideNav-leave.slideNav-leave-active {
 	opacity: 0;
-	transform:   translate(100%,0);
-	transform: translate3d(100%,0,0);
 }
 
 
@@ -498,16 +499,16 @@ nav.nav a:hover i {
 
 .pagefade-enter.pagefade-enter-active {
 	opacity:1;
-	transition: all 500ms ease-in-out;
+	transition: all 1000ms ease-in-out;
 }
 
-.pagefade-leave {
+.pagefade-exit {
 	opacity:1;
-	transition: all 500ms ease-in-out;
 }
 
-.pagefade-leave.pagefade-leave-active {
+.pagefade-exit.pagefade-exit-active {
 	opacity: 0;
+	transition: all 1000ms ease-in-out;
 }
 
 
@@ -520,6 +521,32 @@ nav.nav a:hover i {
 }
 
 
+
+.example-appear {
+	opacity:.01;
+}
+
+.example-appear.example-appear-active {
+	opacity:1;
+	transition: opacity 500ms ease-in;
+}
+.example-enter {
+opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+opacity: 1;
+transition: opacity 500ms ease-in;
+}
+
+.example-exit {
+opacity: 1;
+}
+
+.example-exit.example-exit-active {
+opacity: 0.01;
+transition: opacity 500ms ease-in;
+}
 
 
 

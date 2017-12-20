@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { Route, Switch } from 'react-router-dom';
+import { TransitionGroup, Transition, CSSTransition } from "react-transition-group";
+import { TweenMax } from 'gsap';
 
 import Navbar from './Navbar';
 import ProjectSlideNav from './ProjectSlideNav';
@@ -9,13 +10,10 @@ import About from '../routes/About';
 import Work from '../routes/Work';
 import projects from '../projects';
 
-
-
-
 class App extends React.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			slideNavIsOpen: false
@@ -26,6 +24,7 @@ class App extends React.Component {
 
 	toggleSideNav(e) {
 		// e.preventDefault();
+		console.log('toggled');
 		this.setState({
 			slideNavIsOpen: !this.state.slideNavIsOpen
 		});
@@ -33,33 +32,35 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<BrowserRouter>
+			<div>
+			  <Navbar state={this.state} toggleSideNav={this.toggleSideNav} />
+			  {/* Conditionally render slideNav if opened */}
+			  <TransitionGroup>
+			  <div>{ this.state.slideNavIsOpen && <ProjectSlideNav isVisible={this.state.slideNavIsOpen} toggleSideNav={this.toggleSideNav} /> }</div>
+	    	  </TransitionGroup>
+		      <Route render={({ location }) => (
+		      <TransitionGroup>
+	    	  <CSSTransition
+	    	  			key={location.key + "n"}
+	    	  			appear={true}
+	    	  			timeout={500}
+						classNames="example"
+						mountOnEnter={false}
+						unmountOnExit={true}>
 				<div>
-				  <Navbar state={this.state} toggleSideNav={this.toggleSideNav} />
-				  <CSSTransitionGroup
-					transitionName="slideNav"
-		            transitionEnterTimeout={1300}
-		            transitionLeaveTimeout={1300}
-				  	>
-				  { this.state.slideNavIsOpen && <ProjectSlideNav toggleSideNav={this.toggleSideNav} /> }
-				  </CSSTransitionGroup>
-			    <Route render={({ location }) => (
-				    <CSSTransitionGroup
-							transitionName='pagefade'
-							transitionEnterTimeout={1500}
-							transitionLeaveTimeout={1900}
-				    >
-				      <Switch location={location} key={location.key} >
-						    <Route exact path="/" component={Home}/>
-						    <Route path="/about" component={About}/>
-						    <Route path="/work/:projectID" render={({match}) => (
-						    	<Work toggleSideNav={this.toggleSideNav} projectFound={projects.find( project => project.id === match.params.projectID )} />
-						    )} />
-				      </Switch>
-				    </CSSTransitionGroup>
-					)}/>
-			   </div>
-			</BrowserRouter>
+			      <Switch location={location} key={location.key}>
+					    <Route exact path="/" component={Home}/>
+					    <Route path="/about" component={About}/>
+					    <Route path="/work/:projectID" render={({match}) => (
+					    	<Work toggleSideNav={this.toggleSideNav} projectFound={projects.find( project => project.id === match.params.projectID )} />
+					    )} />
+			      </Switch>
+			    </div>
+		      </CSSTransition>
+		      </TransitionGroup>
+				)}/>
+	    	  </div>
+
 		)
 	}
 

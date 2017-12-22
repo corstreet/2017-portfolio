@@ -10,6 +10,19 @@ import About from '../routes/About';
 import Work from '../routes/Work';
 import projects from '../projects';
 
+
+const FadeInProjectNav = ({ children, isVisible, ...props }) => (
+  <CSSTransition
+    {...props}
+    in={isVisible}
+    timeout={500}
+    unmountOnExit={true}
+    classNames="example"
+  >
+    <ProjectSlideNav isVisible={isVisible} />
+  </CSSTransition>
+);
+
 class App extends React.Component {
 
 	constructor(props) {
@@ -36,30 +49,32 @@ class App extends React.Component {
 			  <Navbar state={this.state} toggleSideNav={this.toggleSideNav} />
 			  {/* Conditionally render slideNav if opened */}
 			  <TransitionGroup>
-			  <div>{ this.state.slideNavIsOpen && <ProjectSlideNav isVisible={this.state.slideNavIsOpen} toggleSideNav={this.toggleSideNav} /> }</div>
-	    	  </TransitionGroup>
+			  <FadeInProjectNav isVisible={this.state.slideNavIsOpen} toggleSideNav={this.toggleSideNav} />
+			  </TransitionGroup>
 		      <Route render={({ location }) => (
-		      <TransitionGroup>
+			  <TransitionGroup>
 	    	  <CSSTransition
 	    	  			key={location.key + "n"}
 	    	  			appear={true}
-	    	  			timeout={500}
+	    	  			timeout={{enter:500,exit:800}}
 						classNames="example"
-						mountOnEnter={false}
-						unmountOnExit={true}>
+						mountOnEnter={true}
+						unmountOnExit={true}
+				>
 				<div>
 			      <Switch location={location} key={location.key}>
 					    <Route exact path="/" component={Home}/>
 					    <Route path="/about" component={About}/>
-					    <Route path="/work/:projectID" render={({match}) => (
-					    	<Work toggleSideNav={this.toggleSideNav} projectFound={projects.find( project => project.id === match.params.projectID )} />
-					    )} />
 			      </Switch>
 			    </div>
 		      </CSSTransition>
-		      </TransitionGroup>
+			  </TransitionGroup>
 				)}/>
-	    	  </div>
+
+		    <Route path="/work/:projectID" render={({match}) => (
+		    	<Work toggleSideNav={this.toggleSideNav} projectFound={projects.find( project => project.id === match.params.projectID )} />
+		    )} />
+	        </div>
 
 		)
 	}

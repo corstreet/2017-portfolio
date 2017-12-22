@@ -18,10 +18,9 @@ class Work extends React.Component {
 			<Transition
 		        in={true}
 		        timeout={300}
-		        appear={true}
+		        appear
 				onEnter={n => {
-					console.log('workin');
-					TweenMax.fromTo(n, .5, { autoAlpha: 0 }, { autoAlpha: 1, delay: .5 });
+					TweenMax.fromTo(n, 1.35, { autoAlpha: 0 }, { autoAlpha: 1, delay: 1 });
 				}}>
 
 				<div className="container work-container">

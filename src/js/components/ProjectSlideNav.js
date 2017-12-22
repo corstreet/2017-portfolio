@@ -3,6 +3,22 @@ import { TweenMax } from 'gsap';
 import { Transition, TransitionGroup } from 'react-transition-group';
 import { NavLink } from 'react-router-dom';
 
+const SlideInOutNav = ({ children, ...props }) => (
+	<Transition
+		{...props}
+		timeout={900}
+		appear
+		onEnter={n => {
+			TweenMax.fromTo(n, .5, {x: -350}, {x: 0, delay: .2});
+		}}
+		onExiting={n => {
+			TweenMax.fromTo(n, .3, {x: 0}, {x: -350});
+		}}
+	>
+	{ children }
+	</Transition>
+)
+
 
 class ProjectSlideNav extends React.Component {
 
@@ -10,33 +26,8 @@ class ProjectSlideNav extends React.Component {
 	render() {
 		const { toggleSideNav, isVisible } = this.props
 		return (
-	      <Transition
-	        in={true}
-	        timeout={700}
-	        appear={true}
-			onEnter={n => {
-				console.log('isVisible');
-				TweenMax.to(n, .7, { autoAlpha: 1 });
-			}}
-			onExit={n => {
-				console.log('not visible');
-				TweenMax.to(n, .9, { autoAlpha: 0 });
-			}}
-	      >
-			<div id="project-nav-view" ref={c => this.container = c}>
-				<Transition
-						in={!!isVisible}
-						timeout={500}
-						appear={true}
-						onEnter={n => {
-							console.log('second that!');
-							TweenMax.fromTo(n, .5, {x: -350}, {x: 0, delay:0.3});
-						}}
-						onExiting={n => {
-							console.log('third that!');
-							TweenMax.to(n, .5, {x: -350});
-						}}
-						>
+			<div id="project-nav-view">
+			<SlideInOutNav in={isVisible}>
 				<div className="slide-nav-wrapper">
 					<ul>
 						<NavLink to="/work/collective-health">
@@ -51,9 +42,8 @@ class ProjectSlideNav extends React.Component {
 						<li className="project-nav-item">Nuvasive</li>
 					</ul>
 				</div>
-				</Transition>
+			</SlideInOutNav>
 			</div>
-		  </Transition>
 		)
 	}
 }

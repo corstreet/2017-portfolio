@@ -15,7 +15,7 @@ class Home extends React.Component {
 
 	particlesInit(){
 		particlesJS.load('particles-js', 'particles.json', function(){
-		  console.log('Have fun with the Particles!');
+		  console.log('Spread ❤️');
 		});
 	}
 

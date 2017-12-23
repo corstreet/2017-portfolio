@@ -20,13 +20,33 @@ class Work extends React.Component {
 		        timeout={300}
 		        appear
 				onEnter={n => {
-					TweenMax.fromTo(n, 1.35, { autoAlpha: 0 }, { autoAlpha: 1, delay: 1 });
+					TweenMax.fromTo(n, 1.65, { autoAlpha: 0 }, { autoAlpha: 1, delay: 1 });
 				}}>
 
 				<div className="container work-container">
+					<Transition
+						in={true}
+						appear
+						timeout={300}
+						onEnter={n => {
+							TweenMax.fromTo(n, .95, {y:-600}, {y:0, delay:.6});
+						}}>
 					<figure style={headerStyle} className="project-header">
 						<object id="ch-svg" type="image/svg+xml" data={company.logo}/>
 					</figure>
+					</Transition>
+					<Transition
+						in={true}
+						appear
+						timeout={300}
+						onEnter={n => {
+							TweenMax.fromTo(n, 1.65, {y:300}, {y:0});
+							const screens = Array.from(n.children[2].children)
+							screens.map(screen => {
+								TweenMax.staggerFromTo(screens, .8, {rotationX:45, rotationY:0 }, {rotationX:5, rotationY:-30, delay:.7, ease: Power4.easeIn }, .25);
+							});
+						}}
+					>
 					<section className="project-wrapper">
 						<h1 className="headline-company">{company.name}</h1>
 						<div className="project-details">
@@ -54,6 +74,7 @@ class Work extends React.Component {
 							<Link to="/work" onClick={this.props.toggleSideNav}>More Projects</Link>
 						</div>
 					</section>
+					</Transition>
 				</div>
 
 			</Transition>

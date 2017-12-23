@@ -9,7 +9,7 @@ const SlideInOutNav = ({ children, ...props }) => (
 		timeout={900}
 		appear
 		onEnter={n => {
-			TweenMax.fromTo(n, .5, {x: -350}, {x: 0, delay: .2});
+			TweenMax.fromTo(n, .25, {x: -350, ease: Expo.easeIn}, {x: 0, delay: .2});
 		}}
 		onExiting={n => {
 			TweenMax.fromTo(n, .3, {x: 0}, {x: -350});

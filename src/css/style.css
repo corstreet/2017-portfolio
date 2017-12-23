@@ -256,7 +256,6 @@ nav.nav a:hover i {
 
 .work-container {
 	overflow:  auto;
-	/*filter: blur(8px);*/
 }
 
 .project-header {
@@ -264,12 +263,14 @@ nav.nav a:hover i {
     height: 30rem;
     background-color: #1d1d1d;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: center;
     background-size: cover;
     display: flex;
 }
 .project-wrapper {
 	padding:  0 60px;
+	max-width: 1260px;
+	margin: 0 auto;
 }
 .project-details {
     width: 45%;
@@ -530,7 +531,7 @@ nav.nav a:hover i {
 
 .example-appear.example-appear-active {
 	opacity:1;
-	transition: opacity 500ms ease-in;
+	transition: opacity 1s ease-in;
 }
 .example-enter {
 opacity: 0.01;
@@ -538,7 +539,7 @@ opacity: 0.01;
 
 .example-enter.example-enter-active {
 	opacity: 1;
-	transition: opacity 500ms ease-in;
+	transition: opacity 1s ease-in;
 }
 
 .example-exit {
@@ -547,7 +548,7 @@ opacity: 1;
 
 .example-exit.example-exit-active {
 opacity: 0.01;
-transition: opacity 500ms ease-in;
+transition: opacity .2s ease-in;
 }
 
 

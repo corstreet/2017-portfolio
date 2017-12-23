@@ -37,7 +37,6 @@ class App extends React.Component {
 
 	toggleSideNav(e) {
 		// e.preventDefault();
-		console.log('toggled');
 		this.setState({
 			slideNavIsOpen: !this.state.slideNavIsOpen
 		});
@@ -56,7 +55,7 @@ class App extends React.Component {
 	    	  <CSSTransition
 	    	  			key={location.key + "n"}
 	    	  			appear={true}
-	    	  			timeout={{enter:500,exit:800}}
+	    	  			timeout={{enter:1000,exit:200}}
 						classNames="example"
 						mountOnEnter={true}
 						unmountOnExit={true}

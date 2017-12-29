@@ -54,11 +54,9 @@ class App extends React.Component {
 			  <TransitionGroup>
 	    	  <CSSTransition
 	    	  			key={location.key + "n"}
-	    	  			appear={true}
 	    	  			timeout={{enter:1000,exit:200}}
+	    	  			appear
 						classNames="example"
-						mountOnEnter={true}
-						unmountOnExit={true}
 				>
 				<div>
 			      <Switch location={location} key={location.key}>

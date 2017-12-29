@@ -6,7 +6,7 @@ const APP_DIR = path.resolve(__dirname, 'src/js');
 const BUILD_DIR = path.resolve(__dirname, './dist');
 
 const config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: APP_DIR + '/index.js',
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',

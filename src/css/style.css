@@ -339,7 +339,6 @@ nav.nav a:hover i {
 	transform-origin: left bottom;
 	display: block;
 	transform: rotateY(-30deg) rotateX(5deg);
-	-webkit-transform:translate3d(0,0,0);
 	box-shadow: 1px 0px 0 #fff,
 				0 0 30px rgba(0,95,99,0.2);
 }
@@ -350,15 +349,14 @@ nav.nav a:hover i {
     transform: rotateY(-30deg) rotateX(5deg) translateX(-50%);
 }
 .screen.tablet {
-	z-index: 1;
     width: 45%;
     top: 15%;
 }
 .screen.mobile {
 	top: 50%;
     width: 20%;
-    z-index: 2;
     right: 50%;
+    -webkit-transform: translate3d(0, 0, 1px)
 }
 .screenshots {
 	content: '';

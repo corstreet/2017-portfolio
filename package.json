@@ -29,6 +29,7 @@
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.1",
+    "three": "^0.89.0",
     "webpack-dashboard": "^1.0.0"
   }
 }

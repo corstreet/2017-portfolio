@@ -20,7 +20,7 @@ class Work extends React.Component {
 		        timeout={300}
 		        appear
 				onEnter={n => {
-					TweenMax.fromTo(n, 1.65, { autoAlpha: 0 }, { autoAlpha: 1, delay: 1 });
+					TweenMax.fromTo(n, 1.65, { autoAlpha: 0 }, { autoAlpha: 1, delay: .8 });
 				}}>
 
 				<div className="container work-container">

@@ -27,7 +27,7 @@ class Home extends React.Component {
 	}
 
 	componentWillMount(){
-		// this.particlesInit();
+		this.particlesInit();
 	}
 
 	particlesInit(){

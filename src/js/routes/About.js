@@ -13,20 +13,16 @@ class About extends React.Component {
 
 	componentDidMount(){
 		const radialJS = new RadialProgressChart('.rings-container--js', {
-			series: [0, 0, 0],
-			center: 'nope'
+			series: [0, 0, 0]
 		});
 		const radialTools = new RadialProgressChart('.rings-container--tools', {
-			series: [0, 0, 0],
-			center: 'nope'
+			series: [0, 0, 0]
 		});
 		const radialHTML = new RadialProgressChart('.rings-container--html', {
-			series: [0, 0, 0],
-			center: 'nope'
+			series: [0, 0, 0]
 		});	
 		const radialCSS = new RadialProgressChart('.rings-container--css', {
-			series: [0, 0, 0],
-			center: 'nope'
+			series: [0, 0, 0]
 		});	
 		radialJS.update([   92, 74, 86]);
 		radialTools.update([69, 88, 65]);
@@ -41,20 +37,20 @@ class About extends React.Component {
 			<section className="container about-container">
 			  <div className="about--wrapper">
 				<div className="about--content">
+					<img className="about--image" src="../assets/images/about--image.jpg" />
 					<h1>Hi, I'm Corwin!</h1>
 					<p className="about--blurb">
 						My passion is to thoughtfully transform creative ideas, designs and information 
 						into tangible interactive experiences for the end user. Being stuck on a hard problem, 
-						having to learn a new technology or methodology, and/or finding ways to make my code more 
-						efficient are some of my favorite parts of this profession. I strive to engineer elegant,  
-						scalable solutions to all problems I encounter in my career.<br/>
+						having to learn a new technology or methodology, and finding ways to make my code more 
+						efficient are some of my favorite aspects of this profession. I strive to engineer elegant,  
+						scalable solutions to all problems I encounter in my work.<br/>
 						<br/>
 						When I'm not sharpening my Javascript skills, you might find me exploring the world 
 						with my amazing wife, enjoying nature, piloting my drone, or cheering for the Philadelphia Eagles!<br/>
 						<br/>
 						Feel free to <a href="javasccript:;">reach out</a> if you believe I can help in any way. 
 					</p>
-					<img className="about--image" src="../assets/images/about--image.jpg" />
 				</div>
 				<div className="skills">
 					{/* GOOD CANDIDATE FOR NEW COMPONENT */}

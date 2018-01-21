@@ -1,6 +1,8 @@
 import React from 'react';
 import * as d3 from 'd3';
 import RadialProgressChart from 'radial-progress-chart';
+import { Transition } from 'react-transition-group';
+import { TweenMax } from 'gsap';
 
 
 
@@ -23,11 +25,14 @@ class About extends React.Component {
 		});	
 		const radialCSS = new RadialProgressChart('.rings-container--css', {
 			series: [0, 0, 0]
-		});	
-		radialJS.update([   92, 74, 86]);
-		radialTools.update([69, 88, 65]);
-		radialCSS.update([  71, 92, 97]);
-		radialHTML.update([ 87, 89, 100]);
+		});
+		setTimeout(function(){
+			radialJS.update([   92, 74, 86]);
+			radialTools.update([96, 88, 69]);
+			radialCSS.update([  71, 92, 97]);
+			radialHTML.update([ 87, 89, 100]);
+		}, 2000);	
+		
 
 	}
 
@@ -35,21 +40,29 @@ class About extends React.Component {
 		return(
 			<div>
 			<section className="container about-container">
+			  <Transition
+		        in={true}
+		        timeout={500}
+		        appear
+				onEnter={n => {
+					TweenMax.fromTo(n, .65, { autoAlpha: 0, x:-50 }, { autoAlpha: 1, x:0, delay: .8 });
+				}}
+			  >
 			  <div className="about--wrapper">
 				<div className="about--content">
 					<img className="about--image" src="../assets/images/about--image.jpg" />
-					<h1>Hi, I'm Corwin!</h1>
+					<h1>Hi! I'm Corwin</h1>
 					<p className="about--blurb">
 						My passion is to thoughtfully transform creative ideas, designs and information 
-						into tangible interactive experiences for the end user. Being stuck on a hard problem, 
-						having to learn a new technology or methodology, and finding ways to make my code more 
-						efficient are some of my favorite aspects of this profession. I strive to engineer elegant,  
+						into tangible interactive experiences for the end user. Solving complex problems, 
+						having to learn new technologies and methodologies, and optimizing my code for 
+						performance are some of my favorite aspects of this profession. I strive to engineer elegant,  
 						scalable solutions to all problems I encounter in my work.<br/>
 						<br/>
 						When I'm not sharpening my Javascript skills, you might find me exploring the world 
-						with my amazing wife, enjoying nature, piloting my drone, or cheering for the Philadelphia Eagles!<br/>
+						with my amazing wife, enjoying nature, or piloting my drone.<br/>
 						<br/>
-						Feel free to <a href="javasccript:;">reach out</a> if you believe I can help in any way. 
+						Feel free to <a href="javascript:;" className="bio-link">reach out</a> if you believe I can help in any way. 
 					</p>
 				</div>
 				<div className="skills">
@@ -69,9 +82,9 @@ class About extends React.Component {
 							<div className="skill--category">Tools</div>
 						</div>
 						<ul className="skill--legend">
-							<li className="legend-item item-outer">Webpack (65%)</li>
-							<li className="legend-item item-middle">Gulp/Grunt (88%)</li>
-							<li className="legend-item item-inner">npm/node (69%)</li>
+							<li className="legend-item item-outer">npm/node (69%)</li>
+							<li className="legend-item item-middle">Gulp/Webpack (88%)</li>
+							<li className="legend-item item-inner">Git/SVN (96%)</li>
 						</ul>
 					</div>
 					<div className="skill-visual">
@@ -96,6 +109,7 @@ class About extends React.Component {
 					</div>
 				</div>
 			  </div>
+			</Transition>
 			</section>
 			</div>
 		)

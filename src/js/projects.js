@@ -9,7 +9,7 @@ const projects = [
 		project: {
 			description: 'Collective Health gives companies a smarter way to provide healthcare coverage through technology. Powered by a platform that connects and administers the entire benefits ecosystem — health plan, benefits programs, spending accounts, employee support — their solution delivers an effortless experience for everyone.',
 			tech: ['Backbone.js/Underscore', 'GSAP', 'PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt', 'SVG'],
-			url: 'http://www.collectivehealth.com'
+			url: 'https://www.collectivehealth.com'
 		},
 		screenshots: {
 			small: {
@@ -22,7 +22,8 @@ const projects = [
 				tablet: '/assets/images/ch-tablet-2.png',
 				mobile: '/assets/images/ch-mobile-2.png'
 			}
-		}
+		},
+		isSVG: true
 	},
 	{
 		id:'nutanix',
@@ -47,32 +48,34 @@ const projects = [
 				tablet: '/assets/images/nutanix-tablet-2.png',
 				mobile: '/assets/images/nutanix-mobile-2.png'
 			}
-		}
+		},
+		isSVG: true
 	},
 	{
 		id:'totango',
 		company: {
-			logo: '/assets/images/ch-logo.svg',
-			headerBG: "url('/assets/images/ch-header-bg.png')",
-			name: 'Collective Health'
+			logo: '/assets/images/totango-logo.png',
+			headerBG: "url('/assets/images/totango-header-bg.png')",
+			name: 'Totango'
 		},
 		project: {
 			description: 'Collective Health gives companies a smarter way to provide healthcare coverage through technology. Powered by a platform that connects and administers the entire benefits ecosystem — health plan, benefits programs, spending accounts, employee support — their solution delivers an effortless experience for everyone.',
 			tech: ['Backbone.js/Underscore', 'GSAP', 'PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt'],
-			url: 'http://www.collectivehealth.com'
+			url: 'https://www.totango.com'
 		},
 		screenshots: {
 			small: {
-				desktop: '/assets/images/ch-desktop.png',
-				tablet: '/assets/images/ch-tablet.png',
-				mobile: '/assets/images/ch-mobile.png'
+				desktop: '/assets/images/totango-desktop.png',
+				tablet: '/assets/images/totango-tablet.png',
+				mobile: '/assets/images/totango-mobile.png'
 			},
 			large: {
-				desktop: '/assets/images/ch-desktop-2.png',
-				tablet: '/assets/images/ch-tablet-2.png',
-				mobile: '/assets/images/ch-mobile-2.png'
+				desktop: '/assets/images/totango-desktop-2.png',
+				tablet: '/assets/images/totango-tablet-2.png',
+				mobile: '/assets/images/totango-mobile-2.png'
 			}
-		}
+		},
+		isSVG: false
 	},
 	{
 		id:'nuvasive',

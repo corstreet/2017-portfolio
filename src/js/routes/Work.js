@@ -8,7 +8,7 @@ class Work extends React.Component {
 
 	render() {
 
-		const { screenshots, project, company } = this.props.projectFound
+		const { screenshots, project, company, isSVG } = this.props.projectFound
 
 		const headerStyle = {
 			backgroundImage: company.headerBG
@@ -32,7 +32,10 @@ class Work extends React.Component {
 							TweenMax.fromTo(n, 1.1, {y:-600}, {y:0, delay:.3});
 						}}>
 					<figure style={headerStyle} className="project-header">
-						<object id="ch-svg" type="image/svg+xml" data={company.logo}/>
+						{isSVG 
+							? <object id="project-svg" type="image/svg+xml" data={company.logo}/>
+							: <img className="project-logo" src={company.logo} alt="company logo"/>
+						}
 					</figure>
 					</Transition>
 					<Transition

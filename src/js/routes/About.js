@@ -33,7 +33,6 @@ class About extends React.Component {
 			radialHTML.update([ 87, 89, 100]);
 		}, 2000);	
 		
-
 	}
 
 	render() {

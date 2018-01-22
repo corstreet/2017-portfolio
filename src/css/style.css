@@ -395,6 +395,11 @@ nav.nav a:hover i {
     padding: 10px 15px;
     font-size: 24px;
     color: #c0a062;
+    transition: background .6s ease-out;
+}
+.more-projects-link:hover {
+	background: #c0a062;
+	color: #fff;
 }
 
 /*SLIDE NAV*/
@@ -594,6 +599,13 @@ transition: opacity .2s ease-in;
 .rings-container {
 	width: 150px;
 }
+.skill--category {
+	text-transform: uppercase;
+    letter-spacing: 3.4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 .about--wrapper {
 	padding: 0 60px;
     max-width: 1400px;
@@ -616,7 +628,7 @@ transition: opacity .2s ease-in;
 	font-family: 'Source Sans Pro';
 }
 .skill-visual {
-	text-align: center;
+	text-align: right;
 	padding: 20px 30px;
 }
 .legend-item {

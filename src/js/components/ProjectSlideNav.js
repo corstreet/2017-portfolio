@@ -39,9 +39,11 @@ class ProjectSlideNav extends React.Component {
 						<NavLink to="/work/totango">
 							<li className="project-nav-item" onClick={toggleSideNav}>Totango</li>
 						</NavLink>
+						<NavLink to="/work/nuvasive">
+							<li className="project-nav-item" onClick={toggleSideNav}>NuVasive</li>
+						</NavLink>
 						<li className="project-nav-item">Esurance</li>
 						<li className="project-nav-item">Big Dog HQ</li>
-						<li className="project-nav-item">Nuvasive</li>
 					</ul>
 				</div>
 			</SlideInOutNav>

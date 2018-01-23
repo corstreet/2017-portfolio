@@ -30,6 +30,9 @@
 	font-size: 14rem;
 	font-family: 'Cormorant Garamond', 'Montserrat';
 	margin: 0;
+	@media (max-width: 1080px) {
+		// font-size: 5rem;
+	}
 }
 .home-subtext {
 	font-size: 3rem;

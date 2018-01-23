@@ -60,7 +60,7 @@ const projects = [
 		},
 		project: {
 			description: 'Totango is a customer success platform that helps recurring revenue businesses simplify the complexities of customer success by connecting the dots of customer data, actively monitoring customer health changes, and driving proactive engagements.',
-			tech: ['Backbone.js/Underscore', 'GSAP', 'PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt'],
+			tech: ['PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt', 'Marketo', 'Salesforce API', 'Git'],
 			url: 'https://www.totango.com'
 		},
 		screenshots: {

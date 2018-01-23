@@ -1,0 +1,82 @@
+/* ABOUT */
+.about-container {
+	background: #000;
+	color: #fff;
+	overflow: auto;
+	min-height: 580px;
+	padding-top: 100px;
+	font-size: 24px;
+}
+.about--content {
+	width: 50%;
+	/*padding: 0 60px;*/
+}
+.about--content h1 {
+	color: #c0a062;
+    letter-spacing: 2px;
+    font-size: 48px;
+    font-family: 'Roboto', Helvetica, Arial;
+}
+.bio-link {
+	color: #fff;
+}
+.bio-link:hover {
+	color: #c0a062;
+}
+.about--image {
+	width: 400px;
+	display: none;
+}
+.about--blurb {
+	font-size: 20px;
+	font-family: 'Roboto', 'Open Sans', Helvetica;
+	color: #999;
+	letter-spacing: 1px;
+}
+.rings-container {
+	width: 150px;
+}
+.skill--category {
+	text-transform: uppercase;
+    letter-spacing: 3.4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.about--wrapper {
+	padding: 0 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about--row {
+	display: flex;
+    position: absolute;
+}
+
+.skills {
+	width: 50%;
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: wrap;
+	font-family: 'Source Sans Pro';
+}
+.skill-visual {
+	text-align: right;
+	padding: 20px 30px;
+}
+.legend-item {
+	font-size: 18px;
+}
+.item-outer {
+	color: #e90b3a;
+}
+.item-middle {
+	color: #a0ff03;
+}
+.item-inner {
+	color: #1ad5de;
+}

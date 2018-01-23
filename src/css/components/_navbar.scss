@@ -1,0 +1,122 @@
+/* NAVBAR */
+
+#nav-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 100%;
+	min-height: 580px;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background: #181818;
+	text-align: center;
+	z-index: 10;
+
+	.logo {
+		background: $gold;
+		color: #000000;
+		display: block;
+		width: 100%;
+		padding: 10px 0;
+		font-size: 28px;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	.nav {
+		width:100%;
+		font-size: 1.4rem;
+		height: 140px;
+
+		a {
+			color: inherit;//override user agent style
+			display: block;
+			height: 45px;
+			font-size: 24px;
+			line-height: 45px;
+			position: relative;
+			&:hover {
+				&:after {
+					opacity: 1;
+					color: $gold;
+				}
+				i {
+					opacity: 0;
+				}
+			}
+			i {
+				transition: all .5s ease-out;
+			}
+			&:after {
+			    content: '';
+			    font-size: 14px;
+			    font-weight: 600;
+			    letter-spacing: 1.5px;
+			    position: absolute;
+			    bottom: 0;
+			    display: block;
+			    width: 100%;
+			    text-align: center;
+			    opacity: 0;
+			    transition: all .5s ease-out;
+			}
+			&:first-child:after {
+				content: 'HOME';
+			}
+			&:first-child+a:after {
+				content: 'ABOUT';
+			}
+			&:first-child+a+a:after {
+				content: 'WORK'
+			}
+			&.active {
+				color: $gold;
+				pointer-events: none;
+				&.noDisable {
+					pointer-events: all;
+				}
+			}
+		}
+
+	}
+	.nav-name {
+		color: $white;
+		font-family: 'Source Sans Pro', 'Open Sans';
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transform: rotate(-90deg);
+		width: 100px;
+	}
+	.social {
+		width: 100%;
+		margin-bottom: 2rem;
+		li a {
+			display: block;
+			font-size: 18px;
+			padding: 7px 0;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

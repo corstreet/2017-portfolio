@@ -13,7 +13,7 @@ class Work extends React.Component {
 		const headerStyle = {
 			backgroundImage: company.headerBG
 		}
-		
+
 		return (
 			<Transition
 		        in={true}
@@ -32,7 +32,7 @@ class Work extends React.Component {
 							TweenMax.fromTo(n, 1.1, {y:-600}, {y:0, delay:.3});
 						}}>
 					<figure style={headerStyle} className="project-header">
-						{isSVG 
+						{isSVG
 							? <object id="project-svg" type="image/svg+xml" data={company.logo}/>
 							: <img className="project-logo" src={company.logo} alt="company logo"/>
 						}

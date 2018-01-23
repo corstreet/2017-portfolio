@@ -1,0 +1,63 @@
+/* SITE */
+
+*, *:after, *:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	margin: 0;
+	font-family: 'Cormorant Garamond', 'Montserrat', Garamond;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+#app {
+	color: $white;
+}
+
+img {
+}
+
+.example-appear {
+	opacity:.01;
+}
+
+.example-appear.example-appear-active {
+	opacity:1;
+	transition: opacity 1s ease-in;
+}
+.example-enter {
+	opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+	opacity: 1;
+	transition: opacity 1s ease-in;
+}
+
+.example-exit {
+	opacity: 1;
+}
+
+.example-exit.example-exit-active {
+	opacity: 0.01;
+	transition: opacity .2s ease-in;
+}

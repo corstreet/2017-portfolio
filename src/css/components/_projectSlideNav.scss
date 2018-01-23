@@ -1,0 +1,38 @@
+/*SLIDE NAV*/
+#project-nav-view {
+	position: absolute;
+    top: 0;
+    left: 60px;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1;
+}
+.project-nav-view {
+	opacity: 0;
+}
+.slide-nav-wrapper {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 350px;
+	color: #c0a062;
+	background: #181818;
+    border: 1px solid #c0a062;
+    border-left: none;
+}
+.project-nav-item {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Source Sans Pro', 'Open sans';
+    font-weight: 600;
+    padding: 20px;
+    border-bottom: 1px solid #c0a062;
+    transition: background .08s ease-in;
+}
+.project-nav-item:hover {
+	background: #FFFFFF;
+	transition: background .17s ease-out;
+	cursor: pointer;
+}

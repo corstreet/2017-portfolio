@@ -40,18 +40,12 @@ class Home extends React.Component {
 		return (
 			<div id="home">
 				<div id="particles-js"></div>
-				  <SlideInTitle in={true} >
-					<div className="home-content">
-					  <h1 className="home-h1">Corwin&nbsp;Street<span className="name-period">.</span></h1>
-					  <div className="home-subtext">Frontend Developer</div>
-					</div>
-				  </SlideInTitle>
-				<div className="home-nav-wrap">
-				  <div className="nav-link onHover work">
-				    <a href="work.html">Contact<span className="right-bounce-arrow">&rarr;</span></a>
-				  </div>
-				  <div className="nav-link-border-bottom"></div>
+				<SlideInTitle in={true} >
+				<div className="home-content">
+				  <h1 className="home-h1">Corwin&nbsp;Street<span className="name-period">.</span></h1>
+				  <div className="home-subtext">Frontend Developer</div>
 				</div>
+				</SlideInTitle>
 			</div>
 		)
 	}

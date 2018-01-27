@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'particles.js';
+import { Link } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 import { TweenMax } from 'gsap';
 
@@ -11,7 +12,7 @@ const SlideInTitle = ({ children, ...props }) => (
 		appear
 		unmountOnExit
 		onEnter={n => {
-			TweenMax.fromTo(n, .7, { yPercent:125, autoAlpha:0 }, { yPercent:0, autoAlpha:1 });
+			TweenMax.fromTo(n, .9, { y:"-125%", x:"-50%", autoAlpha:0 }, { y:"-50%", x:"-50%", autoAlpha:1 });
 		}}
 		>
 		{ children }
@@ -31,9 +32,7 @@ class Home extends React.Component {
 	}
 
 	particlesInit(){
-		particlesJS.load('particles-js', 'particles.json', function(){
-		  console.log('Spread ❤️');
-		});
+		particlesJS.load('particles-js', 'particles.json', function(){});
 	}
 
 	render() {
@@ -43,7 +42,10 @@ class Home extends React.Component {
 				<SlideInTitle in={true} >
 				<div className="home-content">
 				  <h1 className="home-h1">Corwin&nbsp;Street<span className="name-period">.</span></h1>
-				  <div className="home-subtext">Frontend Developer</div>
+				  <div className="home-subtext">Frontend Engineer</div>
+				  <div className="home--cta">
+					<Link to="/work" onClick={this.props.toggleSideNav}>Portfolio</Link>
+				  </div>
 				</div>
 				</SlideInTitle>
 			</div>

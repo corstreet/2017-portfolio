@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const DashboardPlugin = require('webpack-dashboard/plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, 'src/js');
 const BUILD_DIR = path.resolve(__dirname, './dist');
@@ -17,7 +17,7 @@ const config = {
     historyApiFallback: true
   },
   plugins: [
-    new DashboardPlugin(),
+    // new DashboardPlugin(),
     new ExtractTextPlugin("../dist/styles.css")
   ],
   module: {

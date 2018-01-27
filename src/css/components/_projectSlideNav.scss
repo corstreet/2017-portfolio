@@ -20,6 +20,10 @@
 	background: #181818;
     border: 1px solid #c0a062;
     border-left: none;
+    @media (max-width: 899px) {
+        transform: none;
+        top: 60px;
+    }
 }
 .project-nav-item {
     font-size: 24px;

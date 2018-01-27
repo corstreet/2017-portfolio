@@ -27,9 +27,9 @@ class About extends React.Component {
 			series: [0, 0, 0]
 		});
 		setTimeout(function(){
-			radialJS.update([   92, 74, 86]);
-			radialTools.update([96, 88, 69]);
-			radialCSS.update([  71, 92, 97]);
+			radialJS.update([   97, 77, 86]);
+			radialTools.update([96, 88, 79]);
+			radialCSS.update([  83, 96, 98]);
 			radialHTML.update([ 87, 89, 100]);
 		}, 2000);	
 		
@@ -58,7 +58,7 @@ class About extends React.Component {
 						performance are some of my favorite aspects of this profession. I strive to engineer elegant,  
 						scalable solutions to all problems I encounter in my work.<br/>
 						<br/>
-						When I'm not sharpening my Javascript skills, you might find me exploring the world 
+						When I'm not working on closing my Javascript rings, you might find me exploring the world 
 						with my amazing wife, enjoying nature, or piloting my drone.<br/>
 						<br/>
 						Feel free to <a href="javascript:;" className="bio-link">reach out</a> if you believe I can help in any way. 
@@ -72,8 +72,8 @@ class About extends React.Component {
 						</div>
 						<ul className="skill--legend">
 							<li className="legend-item item-outer">Vanilla JS (86%)</li>
-							<li className="legend-item item-middle">React (74%)</li>
-							<li className="legend-item item-inner">jQuery (92%)</li>
+							<li className="legend-item item-middle">React/Redux (77%)</li>
+							<li className="legend-item item-inner">jQuery (97%)</li>
 						</ul>
 					</div>
 					<div className="skill-visual">
@@ -81,7 +81,7 @@ class About extends React.Component {
 							<div className="skill--category">Tools</div>
 						</div>
 						<ul className="skill--legend">
-							<li className="legend-item item-outer">npm/node (69%)</li>
+							<li className="legend-item item-outer">npm/node (79%)</li>
 							<li className="legend-item item-middle">Gulp/Webpack (88%)</li>
 							<li className="legend-item item-inner">Git/SVN (96%)</li>
 						</ul>
@@ -91,9 +91,9 @@ class About extends React.Component {
 							<div className="skill--category">CSS</div>
 						</div>
 						<ul className="skill--legend">
-							<li className="legend-item item-outer">CSS3 (97%)</li>
-							<li className="legend-item item-middle">Preprocessors (92%)</li>
-							<li className="legend-item item-inner">Animation (71%)</li>
+							<li className="legend-item item-outer">CSS3 (98%)</li>
+							<li className="legend-item item-middle">Preprocessors (96%)</li>
+							<li className="legend-item item-inner">Animation (83%)</li>
 						</ul>
 					</div>
 					<div className="skill-visual">

@@ -60,7 +60,7 @@ class App extends React.Component {
 				>
 				<div>
 			      <Switch location={location} key={location.key}>
-					    <Route exact path="/" component={Home}/>
+					    <Route exact path="/" render={props => (<Home toggleSideNav={this.toggleSideNav}/>)} />
 					    <Route path="/about" component={About}/>
 			      </Switch>
 			    </div>

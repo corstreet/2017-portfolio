@@ -12,6 +12,10 @@
 	left: 0;
 	padding-left: 60px;
 	color:  #000000;
+	@media (max-width: 899px){
+		padding-left: 0;
+		padding-top: 60px;
+	}
 }
 #home {
 	overflow: auto;
@@ -25,13 +29,16 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	@media (max-width: 899px){
+		padding-left: 0;
+	}
 }
 .home-h1 {
 	font-size: 14rem;
 	font-family: 'Cormorant Garamond', 'Montserrat';
 	margin: 0;
 	@media (max-width: 1080px) {
-		// font-size: 5rem;
+		font-size: 10rem;
 	}
 }
 .home-subtext {
@@ -43,6 +50,21 @@
 }
 .name-period {
 	color: #c0a062;
+}
+.home--cta {
+	margin: 5% auto;
+    max-width: fit-content;
+    border: 1px solid #c0a062;
+    background: #c0a062;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    transition: background .6s ease-out;
+    &:hover {
+		background: #fff;
+		color: #c0a062;
+    }
 }
 .home-nav-wrap {
 	display: flex;

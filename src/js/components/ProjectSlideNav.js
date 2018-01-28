@@ -46,7 +46,9 @@ class ProjectSlideNav extends React.Component {
 						<NavLink to="/work/totango">
 							<li className="project-nav-item" onClick={toggleSideNav}>Totango</li>
 						</NavLink>
-						<li className="project-nav-item">WebGL/THREE</li>
+						<NavLink to="/ThreeJS">
+							<li className="project-nav-item" onClick={toggleSideNav}>WebGL/THREE</li>
+						</NavLink>
 					</ul>
 				</div>
 			</SlideInOutNav>

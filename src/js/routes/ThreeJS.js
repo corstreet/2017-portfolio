@@ -33,7 +33,7 @@ class About extends React.Component {
 		const scene = new Scene();
 
 		//texture
-		const texture = new TextureLoader().load( "./assets/material-threejs/1_earth_16k.jpg" );
+		const texture = new TextureLoader().load( "./assets/material-threejs/5_night_8k.jpg" );
 		// const textureBump = new TextureLoader().load( "./assets/material-threejs/Bump.jpg" );
 
 		//create/adjust camera
@@ -64,7 +64,7 @@ class About extends React.Component {
 	}
 
 	componentWillUnmount() {
-		console.log('unmoutning')
+		console.log('unmounting')
 	  this.stop()
 	  this.container.removeChild(this.renderer.domElement)
 	}

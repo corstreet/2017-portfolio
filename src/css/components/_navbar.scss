@@ -28,9 +28,11 @@
 	.logo {
 		background: $gold;
 		color: #000000;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
-		padding: 10px 0;
+		padding: 15px 0;
 		font-size: 28px;
 		&:hover {
 			color: $white;
@@ -52,6 +54,9 @@
 			justify-content: space-around;
 			padding: 0 30px;
 		}
+		@media (max-width: 767px){
+			padding-right: 0;
+		}
 
 		a {
 			color: inherit;//override user agent style
@@ -63,16 +68,19 @@
 			@media (max-width: 899px){
 				padding: 0 30px;
 			}
+			@media (max-width: 767px){
+				padding: 0 15px;
+			}
 			&:hover {
 				&:after {
 					opacity: 1;
 					color: $gold;
 				}
-				i {
+				svg {
 					opacity: 0;
 				}
 			}
-			i {
+			svg {
 				transition: all .5s ease-out;
 			}
 			&:after {
@@ -125,6 +133,10 @@
 			display: flex;
 			justify-content: flex-end;
 			margin-bottom: inherit;
+			padding-right: 30px;
+		}
+		@media (max-width: 767px) {
+			display: none;
 		}
 		li a {
 			display: block;
@@ -135,7 +147,35 @@
 			}
 		}
 	}
-
+	.social--mobile {
+		display:none;
+		@media (max-width: 767px) {
+			display: block;
+			&-menu-icon {
+				font-size: 30px;
+				svg {
+					margin: 10px 20px;
+				}
+			}
+		}
+	}
+	.social--mobile-slideBox {
+		display:none;
+		@media (max-width: 767px) {
+			display: block;
+			position: absolute;
+			top: 60px;
+			right: 0;
+			font-size: 20px;
+			width: 70px;
+			background: $gold;
+			padding: 20px 0;
+			li {
+				padding: 12px;
+			}
+		}
+	}
+	
 }
 
 

@@ -56,6 +56,9 @@
     @media (max-width: 1080px) {
     	flex-direction: column;
     }
+    @media (max-width: 640px) {
+    	padding: 0 20px;
+    }
 }
 .about--row {
 	display: flex;

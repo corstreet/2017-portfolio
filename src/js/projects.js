@@ -9,7 +9,7 @@ const projects = [
 		project: {
 			description: 'Collective Health gives companies a smarter way to provide healthcare coverage through technology. Powered by a platform that connects and administers the entire benefits ecosystem — health plan, benefits programs, spending accounts, employee support — their solution delivers an effortless experience for everyone.',
 			tech: ['Backbone.js/Underscore', 'GSAP', 'PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt', 'SVG'],
-			url: 'https://www.collectivehealth.com'
+			url: '//www.collectivehealth.com'
 		},
 		screenshots: {
 			small: {
@@ -35,7 +35,7 @@ const projects = [
 		project: {
 			description: 'Nutanix makes infrastructure invisible, elevating IT to focus on the applications and services that power their business. The Nutanix enterprise cloud platform leverages web-scale engineering and consumer-grade design to natively converge compute, virtualization and storage into a resilient, software-defined solution with rich machine intelligence.',
 			tech: ['ES6', 'Mustache.js', 'Pattern Lab 3', 'HTML5', 'CSS3/Sass', 'Wordpress API', 'GitFlow', 'Gulp', 'npm', 'PHP/ACF'],
-			url: ''
+			url: '//nutanix.com/'
 		},
 		screenshots: {
 			small: {
@@ -61,7 +61,7 @@ const projects = [
 		project: {
 			description: 'Totango is a customer success platform that helps recurring revenue businesses simplify the complexities of customer success by connecting the dots of customer data, actively monitoring customer health changes, and driving proactive engagements.',
 			tech: ['PHP/ACF', 'jQuery', 'CSS3(Sass)', 'Wordpress API', 'Grunt', 'Marketo', 'Salesforce API', 'Git'],
-			url: 'https://www.totango.com'
+			url: '//www.totango.com/'
 		},
 		screenshots: {
 			small: {
@@ -87,7 +87,7 @@ const projects = [
 		project: {
 			description: 'NuVasive is the leader in spine technology innovation, focused on transforming spine surgery with minimally disruptive, procedurally-integrated solutions.',
 			tech: ['ES6', 'Mustache.js', 'Pattern Lab 3', 'HTML5', 'CSS3/Sass', 'Wordpress API', 'GitFlow', 'Gulp', 'npm', 'PHP/ACF'],
-			url: ''
+			url: '//nuvasive.com/'
 		},
 		screenshots: {
 			small: {

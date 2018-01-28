@@ -22,7 +22,7 @@
 }
 .home-content {
 	color: #FFFFFF;
-	/*width: 100%;*/
+	width: 90%;
 	padding-left: 60px;
 	text-align: center;
 	position: absolute;
@@ -39,6 +39,9 @@
 	margin: 0;
 	@media (max-width: 1080px) {
 		font-size: 10rem;
+	}
+	@media (max-width: 640px) {
+		font-size: 7.5rem;
 	}
 }
 .home-subtext {

@@ -61,7 +61,7 @@ class About extends React.Component {
 						When I'm not working on closing my Javascript rings, you might find me exploring the world 
 						with my amazing wife, enjoying nature, or piloting my drone.<br/>
 						<br/>
-						Feel free to <a href="javascript:;" className="bio-link">reach out</a> if you believe I can help in any way. 
+						Feel free to <a href="mailto:thecorwinstreet@gmail.com" className="bio-link">reach out</a> if you believe I can help in any way. 
 					</p>
 				</div>
 				<div className="skills">

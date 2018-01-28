@@ -5,6 +5,7 @@ import { TweenMax } from 'gsap';
 
 import Navbar from './Navbar';
 import ProjectSlideNav from './ProjectSlideNav';
+import ThreeJS from '../routes/ThreeJS';
 import Home from '../routes/Home';
 import About from '../routes/About';
 import Work from '../routes/Work';
@@ -62,6 +63,7 @@ class App extends React.Component {
 			      <Switch location={location} key={location.key}>
 					    <Route exact path="/" render={props => (<Home toggleSideNav={this.toggleSideNav}/>)} />
 					    <Route path="/about" component={About}/>
+					    <Route path="/threejs" component={ThreeJS}/>
 			      </Switch>
 			    </div>
 		      </CSSTransition>

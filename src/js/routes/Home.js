@@ -41,7 +41,7 @@ class Home extends React.Component {
 				<div id="particles-js"></div>
 				<SlideInTitle in={true} >
 				<div className="home-content">
-				  <h1 className="home-h1">Corwin&nbsp;Street<span className="name-period">.</span></h1>
+				  <h1 className="home-h1">Corwin Street<span className="name-period">.</span></h1>
 				  <div className="home-subtext">Frontend Engineer</div>
 				  <div className="home--cta">
 					<Link to="/work" onClick={this.props.toggleSideNav}>Portfolio</Link>

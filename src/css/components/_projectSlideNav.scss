@@ -24,6 +24,9 @@
         transform: none;
         top: 60px;
     }
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
 .project-nav-item {
     font-size: 24px;

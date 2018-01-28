@@ -44,7 +44,7 @@ class Work extends React.Component {
 						timeout={300}
 						onEnter={n => {
 							TweenMax.fromTo(n, 1.65, {y:300}, {y:0});
-							const screens = Array.from(n.children[2].children)
+							const screens = Array.from(n.children[1].children)
 							screens.map(screen => {
 								TweenMax.staggerFromTo(screens, .8, {rotationX:45, rotationY:0, scale:.5 }, {rotationX:5, rotationY:-30, scale:1, delay:.7, ease: Power4.easeIn }, .25);
 							});
@@ -52,6 +52,11 @@ class Work extends React.Component {
 					>
 					<section className="project-wrapper">
 						<h1 className="headline-company">{company.name}</h1>
+						<div className="project-screens">
+							<img className="screen desktop" src={screenshots.small.desktop} alt=""/>
+							<img className="screen tablet" src={screenshots.small.tablet} alt=""/>
+							<img className="screen mobile" src={screenshots.small.mobile} alt=""/>
+						</div>
 						<div className="project-details">
 							<p>{project.description}</p>
 							<ul className="tech-list">
@@ -60,13 +65,8 @@ class Work extends React.Component {
 								})}
 							</ul>
 							<div className="view-project-link">
-								<a href="javascript:;">See It Live</a>
+								<a href={project.url}>See It Live</a>
 							</div>
-						</div>
-						<div className="project-screens">
-							<img className="screen desktop" src={screenshots.small.desktop} alt=""/>
-							<img className="screen tablet" src={screenshots.small.tablet} alt=""/>
-							<img className="screen mobile" src={screenshots.small.mobile} alt=""/>
 						</div>
 						<div className="screenshots">
 							<img className="screenshots--desktop" src={screenshots.large.desktop} alt=""/>

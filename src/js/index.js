@@ -10,6 +10,6 @@ const app = document.getElementById('app');
 
 render((
 	<BrowserRouter basename={window.location.pathname || ''}>
-		<App />
+		<Route exact path="/" component={App} />
 	</BrowserRouter>
 ), app);

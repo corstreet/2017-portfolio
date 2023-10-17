@@ -9,7 +9,7 @@ import App from './components/App';
 const app = document.getElementById('app');
 
 render((
-	<BrowserRouter>
+	<BrowserRouter basename={window.location.pathname || ''}>
 		<App />
 	</BrowserRouter>
 ), app);

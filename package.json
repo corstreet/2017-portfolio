@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio Site for Corwin Street - Senior FE Developer",
   "main": "index.html",
-  "homepage": "https://corstreet.github.io/Portfolio-2017-REACTjs-/",
+  "homepage": "/",
   "scripts": {
     "build": "webpack build",
     "watch": "webpack -d --watch",

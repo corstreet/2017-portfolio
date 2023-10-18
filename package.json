@@ -5,7 +5,7 @@
   "main": "index.html",
   "homepage": "/",
   "scripts": {
-    "build": "webpack build",
+    "build": "npx webpack --config webpack.config.js",
     "watch": "webpack -d --watch",
     "start": "webpack-dashboard -- webpack-dev-server -d --inline --content-base . --watch --history-api-fallback"
   },
